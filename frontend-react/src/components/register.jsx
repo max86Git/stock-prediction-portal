@@ -25,17 +25,17 @@ const Register = () => {
       email,
       password
     }
-    console.log(userData)
+    //console.log(userData)
     try{
       const response = await axios.post('http://127.0.0.1:8000/api/v1/register/', userData)
-      console.log('response.data==> ', response.data)
-      console.log('response.status==> ', response.status);
+      //console.log('response.data==> ', response.data)
+      //console.log('response.status==> ', response.status);
       setErrors({})
       setSuccess(true)
     }
     catch(error){
       setErrors(error.response.data)
-      console.log('Registration error ==>', error.response.data)
+      //console.log('Registration error ==>', error.response.data)
     }
     finally{
       setLoading(false)
